@@ -8,7 +8,8 @@ public class damageController : MonoBehaviour
 
 private float oldGesundheit;
 private float newGesundheit;
-public float schaden = 5f;
+public float schaden = 20f;
+public float naturschaden = 5f;
 
 private void OnCollisionEnter(Collision collision)
      {
@@ -31,7 +32,34 @@ private void OnCollisionEnter(Collision collision)
             }
 
         }
+
+
+
+
+         if (collision.transform.tag == "natur")
+        {
+            
+            
+            oldGesundheit = database.gesundheit;
+            newGesundheit = oldGesundheit - naturschaden;
+
+            if (newGesundheit <= 0)
+            {
+                
+                SceneManager.LoadScene("GameOver");
+            }
+            else
+            {
+            //Debug.Log("päng " + oldGesundheit + "| NewGesundheit: " + newGesundheit);
+            database.gesundheit = newGesundheit;
+            }
+
+        }
+
+
+
      }
-        
+
+   
     
 }
