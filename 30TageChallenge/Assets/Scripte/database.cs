@@ -9,5 +9,7 @@ public static float gesundheit = 100;
 
 public static float gefahrenekm = 0;
 
+public static float punkte = 0;
+
 
 }
