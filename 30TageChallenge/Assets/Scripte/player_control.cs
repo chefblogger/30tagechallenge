@@ -20,8 +20,8 @@ public float rotationSpeed = 200.0f;
 
         void Handy()
     {
-    transform.Rotate(0, UltimateJoystick.GetHorizontalAxis( "movement" ) * Time.deltaTime * rotationSpeed, 0);
-    transform.Translate(0,0, UltimateJoystick.GetVerticalAxis( "movement" ) * Time.deltaTime * movementSpeed);  
+   // transform.Rotate(0, UltimateJoystick.GetHorizontalAxis( "movement" ) * Time.deltaTime * rotationSpeed, 0);
+   // transform.Translate(0,0, UltimateJoystick.GetVerticalAxis( "movement" ) * Time.deltaTime * movementSpeed);  
     }
 
     void Computer()

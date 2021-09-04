@@ -10,6 +10,7 @@ private float oldGesundheit;
 private float newGesundheit;
 public float schaden = 20f;
 public float naturschaden = 5f;
+public float autoschaden = 6f;
 
 private void OnCollisionEnter(Collision collision)
      {
@@ -17,7 +18,7 @@ private void OnCollisionEnter(Collision collision)
         {
             
             
-            oldGesundheit = database.gesundheit;
+            oldGesundheit = PlayerPrefs.GetFloat("HealthPoints", newGesundheit );
             newGesundheit = oldGesundheit - schaden;
 
             if (newGesundheit <= 0)
@@ -28,7 +29,8 @@ private void OnCollisionEnter(Collision collision)
             else
             {
             //Debug.Log("päng " + oldGesundheit + "| NewGesundheit: " + newGesundheit);
-            database.gesundheit = newGesundheit;
+            //database.gesundheit = newGesundheit;
+            PlayerPrefs.SetFloat("HealthPoints", newGesundheit );
             }
 
         }
@@ -40,7 +42,7 @@ private void OnCollisionEnter(Collision collision)
         {
             
             
-            oldGesundheit = database.gesundheit;
+            oldGesundheit = PlayerPrefs.GetFloat("HealthPoints", newGesundheit );
             newGesundheit = oldGesundheit - naturschaden;
 
             if (newGesundheit <= 0)
@@ -51,10 +53,38 @@ private void OnCollisionEnter(Collision collision)
             else
             {
             //Debug.Log("päng " + oldGesundheit + "| NewGesundheit: " + newGesundheit);
-            database.gesundheit = newGesundheit;
+            //database.gesundheit = newGesundheit;
+            PlayerPrefs.SetFloat("HealthPoints", newGesundheit );
             }
 
         }
+
+        if (collision.transform.tag == "auto")
+        {
+            
+            
+            oldGesundheit = PlayerPrefs.GetFloat("HealthPoints", newGesundheit );
+            newGesundheit = oldGesundheit - autoschaden;
+
+            if (newGesundheit <= 0)
+            {
+                
+                SceneManager.LoadScene("GameOver");
+            }
+            else
+            {
+            //Debug.Log("päng " + oldGesundheit + "| NewGesundheit: " + newGesundheit);
+            //database.gesundheit = newGesundheit;
+            PlayerPrefs.SetFloat("HealthPoints", newGesundheit );
+            }
+
+        }
+
+
+
+
+
+
 
 
 

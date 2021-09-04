@@ -15,7 +15,8 @@ public class healthbar : MonoBehaviour
 
     void Update()
     {
-        oldGesundheit = database.gesundheit;
+        oldGesundheit = PlayerPrefs.GetFloat("HealthPoints");
+        //oldGesundheit = database.gesundheit;
         healthBar.fillAmount = oldGesundheit /100;
     }
 

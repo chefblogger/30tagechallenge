@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Damaging
   - natur
+  - auto
   layers:
   - Default
   - TransparentFX
