@@ -58,7 +58,7 @@ public int AutoGang;
         if (Input.GetKeyDown("e"))
         {
 
-            if (DBAutoGang >= 2)
+            if (DBAutoGang >= 1)
                     {
                     movementSpeed -= 10f;
                     AutoGang = DBAutoGang - 1;

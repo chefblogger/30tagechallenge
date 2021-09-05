@@ -81,6 +81,18 @@ private void OnCollisionEnter(Collision collision)
         }
 
 
+        //wasser berührt und sofort tot
+        if (collision.transform.tag == "tot")
+        {
+            
+            
+             
+                SceneManager.LoadScene("GameOver");
+          
+
+        }
+
+
 
 
 
