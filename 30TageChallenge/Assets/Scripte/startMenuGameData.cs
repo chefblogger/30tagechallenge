@@ -15,6 +15,8 @@ public class startMenuGameData : MonoBehaviour
         
         PlayerPrefs.SetInt("CashPoints", 0);
 
+        PlayerPrefs.SetInt("AutoGang", 1);
+
         PlayerPrefs.SetFloat("HealthPoints", 100);
     }
 

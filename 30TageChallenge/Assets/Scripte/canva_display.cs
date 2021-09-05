@@ -25,6 +25,10 @@ public class canva_display : MonoBehaviour
     private float gesundheitsWert;
     public Text gesundheitsText;
 
+    //auto gang anzeige
+    private int autoGang;
+    public Text autoGangText;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -56,6 +60,9 @@ public class canva_display : MonoBehaviour
         gesundheitsWert = PlayerPrefs.GetFloat("HealthPoints");
         gesundheitsText.text = gesundheitsWert + " %";
 
+        //auto gang anzeige
+        autoGang = PlayerPrefs.GetInt("AutoGang");
+        autoGangText.text = autoGang + "";
 
     }
 }

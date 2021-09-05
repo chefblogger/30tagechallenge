@@ -8,14 +8,21 @@ public class player_control : MonoBehaviour
 public float movementSpeed = 10.0f;
 public float rotationSpeed = 200.0f;
 
+private int DBAutoGang;
+public int AutoGang;
 
 
 
     // Update is called once per frame
     void Update()
     {
+        Schaltung();
+
+
        Computer(); 
        //Handy();
+
+       
     }
 
         void Handy()
@@ -28,6 +35,37 @@ public float rotationSpeed = 200.0f;
     {
     transform.Rotate(0, Input.GetAxis("Horizontal") * Time.deltaTime * rotationSpeed, 0);
     transform.Translate(0,0, Input.GetAxis("Vertical") * Time.deltaTime * movementSpeed); 
+    }
+
+
+    void Schaltung(){
+
+        DBAutoGang = PlayerPrefs.GetInt("AutoGang");
+
+        if (Input.GetKeyDown("space"))
+        {
+            if (DBAutoGang <= 3)
+                    {
+                    movementSpeed += 10f;
+                    AutoGang = DBAutoGang + 1;
+                    PlayerPrefs.SetInt("AutoGang", AutoGang );
+                    }
+             
+            
+            
+
+        }
+        if (Input.GetKeyDown("e"))
+        {
+
+            if (DBAutoGang >= 2)
+                    {
+                    movementSpeed -= 10f;
+                    AutoGang = DBAutoGang - 1;
+                    PlayerPrefs.SetInt("AutoGang", AutoGang );
+                    }
+
+        }
     }
 
 }
