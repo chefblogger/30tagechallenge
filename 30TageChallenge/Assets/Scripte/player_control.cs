@@ -22,7 +22,7 @@ public int AutoGang;
        Computer(); 
        //Handy();
 
-       
+       Quit();
     }
 
         void Handy()
@@ -65,6 +65,15 @@ public int AutoGang;
                     PlayerPrefs.SetInt("AutoGang", AutoGang );
                     }
 
+        }
+    }
+
+
+
+    void Quit(){
+        if (Input.GetKey("q"))
+        {
+            Application.Quit();
         }
     }
 
