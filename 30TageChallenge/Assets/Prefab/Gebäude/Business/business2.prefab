@@ -641,7 +641,7 @@ GameObject:
   - component: {fileID: 6350615955882235189}
   m_Layer: 0
   m_Name: "geb\xE4ude"
-  m_TagString: Untagged
+  m_TagString: Damaging
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

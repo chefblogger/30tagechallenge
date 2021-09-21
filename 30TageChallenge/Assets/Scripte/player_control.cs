@@ -5,7 +5,7 @@ using UnityEngine;
 public class player_control : MonoBehaviour
 {
 
-public float movementSpeed = 10.0f;
+public float movementSpeed = 30.0f;
 public float rotationSpeed = 200.0f;
 
 private int DBAutoGang;

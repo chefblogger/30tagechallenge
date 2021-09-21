@@ -5,7 +5,7 @@ using UnityEngine;
 public class distanz : MonoBehaviour
 {
 
-public float totalDistance = 0;
+public float totalDistance = 0f;
 public static float gefahrenekm;
 
 

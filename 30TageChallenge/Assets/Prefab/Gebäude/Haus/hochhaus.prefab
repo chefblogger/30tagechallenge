@@ -4568,7 +4568,7 @@ GameObject:
   - component: {fileID: 7692862916926231868}
   m_Layer: 0
   m_Name: "hochhausgeb\xE4ude"
-  m_TagString: Untagged
+  m_TagString: Damaging
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
