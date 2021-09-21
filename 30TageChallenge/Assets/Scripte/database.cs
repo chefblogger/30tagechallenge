@@ -11,5 +11,8 @@ public static float gefahrenekm = 0;
 
 public static float punkte = 0;
 
+void Start(){
+    PlayerPrefs.SetInt("LevelCoins", 0 );
+}
 
 }
